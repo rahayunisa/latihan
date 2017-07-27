@@ -47,6 +47,19 @@ Route::get('/siswa2', function () {
     return $query;
 });
 
+Route::get('/siswa3', function () {
+    $query = App\Siswa::where('nama','like','%Jihanna%')->get();
+    return $query;
+});
+
+Route::get('/siswa4', function () {
+    $siswa = App\Siswa::find(1);
+    $siswa->nama = "Nisarhy";
+    $siswa->save();
+    return $siswa;
+});
+
+
 
 Auth::routes();
 
