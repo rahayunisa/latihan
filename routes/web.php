@@ -15,6 +15,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/latihan',function() {
+    return view ('latihan');
+});
+
 Route::get('/testmodel', function () {
 	$query = App\Post::all(); 
     return $query;
